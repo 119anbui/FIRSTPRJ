@@ -1,2 +1,60 @@
-
 script(type="module" src="../js/upcoming.js") 
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "nav">
+            <!--    Navigation_logo      -->
+            <div class= "nav_logo">
+                <h1 style="color:blue">Shoes World</h1>
+            </div>
+             <!--    Navigation_menu_toggle       -->
+             <input class="btn_toggle_menu_2" type="checkbox"/>
+             <div class="toggle_menu_icon_2">
+                 <span></span>
+             </div>  
+            <!--    Navigation_menu      -->
+            <div class = "nav_menu">
+                <input class ="btn_toggle_menu" type="checkbox"/>
+                <div class="toggle_menu_icon">
+                    <span>
+                        <img src="./pngegg.png" alt=""/>
+                    </span>
+                </div>
+                <div class = "search_container">
+                    <form>
+                        <input class = "search" type = "text" placeholder=" Search" name="search"/>
+                        <button class = "btn btn-primary"></button>
+                    </form>
+                </div>
+                <ul class = "nav_menu_list">
+                    <li class = "nav_menu_items"><a href="#" class = "nav_menu_link">Sale</a></li>
+                    <li class = "nav_menu_items"><a href="#" class = "nav_menu_link">Purchase</a></li> 
+                    <li class = "nav_menu_items"><a href="#" class = "nav_menu_link">Collection</a></li>
+                    <li class = "nav_menu_items"><a href="#" class = "nav_menu_link">Material</a></li>
+                    <li class = "nav_menu_items"><a href="# " class = "nav_menu_link">History</a></li>
+                    <span><li class="nav-menu_item">
+                        <a class="nav-menu_link" href="#"><i class="bi bi-search"></i></a>
+                    </li></span>
+                </ul>
+            </div>
+            <div class = "events_bg">
+                <ul class="events_menu_list">
+                    <li class="events_menu_items"><a href = "#" class = "events_menu_link">Upcoming</a></li>
+                    <li class="events_menu_items"><a href = "#" class = "events_menu_link">Recent</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

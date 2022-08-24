@@ -55,3 +55,301 @@ body {
     border: 1px solid green;
     height: 100vh;
 }
+.nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+}
+.nav_logo {
+    flex-flow: nowrap;
+    font-family: 'DynaPuff', cursive;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: flex-end;
+}
+.nav_menu_list {
+    display: flex;
+    list-style-type: none;
+}
+.nav_menu_items{
+    padding: 0 3rem;
+}
+.nav_menu_link{
+    text-decoration: none;
+    color: grey;
+    font-size: 2rem;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.nav_menu_link:hover{
+    color: #fe3f40;
+}
+.btn_toggle_menu {
+    position: absolute;
+    right: 0;
+    padding: 1rem 3rem;
+
+}
+.events_bg {
+    position: relative;
+    transform: translate(0px, 30px);
+}
+.events_menu_list {
+    display: flex;
+    position: absolute;
+    background-color: #B66EE0;
+    right: 0;
+    border-radius: 20px;
+    list-style-type: none;
+}
+.events_menu_items {
+    padding: 1.2rem;
+}
+.events_menu_link {
+    padding: 0.5rem 1rem;
+    color: black;
+    text-decoration: none;
+}
+.events_menu_link:hover{
+    padding: 0.5rem 1rem;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0.2rem 0.3rem 0.2rem;
+}
+.nav_menu_search {
+    text-decoration: none;
+    color: grey;
+    font-size: 2rem;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.search_container {
+    display: none;
+    transition: 0.4s; 
+}
+.search {
+    height: 3rem;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    z-index: 997;
+    align-items: center;
+}
+.search:focus {
+    width: 40rem;
+    transition: 0.4s;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+.search:hover {
+    width: 40rem;
+    padding: 1rem 2rem;
+    transition: 0.6;
+}
+.btn_toggle_menu {
+    z-index: 999;
+    opacity: 0;
+    width: 2rem;
+    height: 2rem;
+} 
+.toggle_menu_icon {
+    position: absolute;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+}
+.toggle_menu_icon span {
+    display: none;
+}
+.btn_toggle_menu:checked ~ .nav_menu_list{
+    display: none;
+    transition: 0.3s;
+}
+.btn_toggle_menu:checked ~ .nav_menu {
+    width: 100%;
+}
+.btn_toggle_menu:checked ~ .search_container{
+    display: block;
+    width: 100%;
+}
+.btn_toggle_menu:checked ~ .toggle_menu_icon img {
+    display: none;
+}
+.btn_toggle_menu:checked ~ .toggle_menu_icon span{
+    display: flex;
+    height: 2rem;
+    transform: translate(-7px, 6px);
+    z-index: 998;
+    width: 2rem;
+}
+.btn_toggle_menu:checked ~ .toggle_menu_icon span img {
+    height: 2rem;
+    display: block;
+}
+.btn_toggle_menu:checked {
+    transform: translate(-7px, 6px);
+    z-index: 999;
+}
+.btn_toggle_menu_2 {
+    display: none;
+}
+@media (max-width: 846px) {
+    .btn_toggle_menu {
+        display: none;
+    }
+    .toggle_menu_icon {
+        display: none;
+    }
+    .btn_toggle_menu_2 {
+        display: block;
+    }
+    .nav{
+        position: relative;
+        justify-content: flex-start;
+    }
+    .nav_menu{
+        position: absolute;
+        display: block; 
+        top: 0;  
+        height: 0;
+        overflow: hidden; 
+        bottom: 0;
+    }
+    .nav_menu_list{
+        display: block;
+        height: auto;
+        transform: translate(-70px, 120px);
+    }
+    .nav_menu_items{
+        padding: 0;
+    }
+    .nav_menu_list span {
+        display: none;
+    }
+    .nav_menu_link{
+        display: block;
+        width: 44rem;
+        /* border-bottom: 1px solid white; */
+        text-align: center;
+        padding: 1rem 0;
+        color: #483D8B;
+    }
+    .events_bg {
+        top: 50%;
+    }
+    .btn_toggle_menu_2:checked ~ .nav_menu{
+        height: 100vh;
+        background-color: #B5B5B5;
+        opacity: 1;
+        transition: 0.3s;
+        width: 30rem;
+        top: 0
+    }
+    .search_container {
+        display: block;
+        transform: translate(0, 110px);
+        transition: 0.5s;
+    }
+    .search {
+        right: 75px;
+    }
+    .search:focus{
+        width: 100% !important; 
+        transition: 0.5s;
+    }
+    .search:hover {
+        width: 50%; 
+        transition: 0.5s;
+    }
+    .btn_toggle_menu_2:checked ~ .search_container{
+        visibility: hidden;
+        opacity: 0;
+    }  
+    .btn_toggle_menu_2:checked ~ .events_bg {
+        display: none;
+    }
+    .btn_toggle_menu_2:checked {
+        z-index: 999;
+    }
+    .btn_toggle_menu_2:checked ~ .toggle_menu_icon_2 {
+        z-index: 998;
+    }
+    .nav_logo{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .btn_toggle_menu_2 {
+        position: absolute;
+        left: 4rem;
+        width: 4rem;
+        height: 4rem;
+        z-index: 999;
+        opacity: 0;
+    }
+    .toggle_menu_icon_2 {
+        position: absolute;
+        left: 4rem;
+        width: 4rem;
+        height: 4rem;
+        /*border: 1px solid red;*/
+        display: flex;
+        align-items: center;
+    }
+    .toggle_menu_icon_2 span {
+        display: block;
+        height: 3px;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        transition: 0.3s;
+    }
+    .toggle_menu_icon_2::before{
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    .toggle_menu_icon_2::after{
+        content: "";
+        height: 3px;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    .btn_toggle_menu_2:checked ~ .toggle_menu_icon_2 {
+        background-color: #382c82;
+    }
+    .btn_toggle_menu_2:checked ~ .toggle_menu_icon_2::before {
+        top: 50%;
+        transform: translate(-13%, -50%) rotate(45deg);
+        width: 133%;
+        background-color: rgb(247, 240, 240);
+    }
+    .btn_toggle_menu_2:checked ~ .toggle_menu_icon_2::after {
+        top: 50%;
+        transform: translate(-13%, -50%) rotate(-45deg);
+        width: 133%;
+        background-color: rgb(247, 240, 240);
+    }
+    .btn_toggle_menu_2:checked ~ .toggle_menu_icon_2 span{
+        width: 0%;
+        transition: 0.3s;
+    }
+}
