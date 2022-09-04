@@ -1,0 +1,1 @@
+document.querySelector(".nut_dropdown").addEventListener("click",e=>{document.querySelector(".noidung_dropdown").classList.toggle("hienThi")});
